@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #111;
+}
+
+.row_poster {
+    width: 100;
+    object-fit: contain;
+    max-height: 100px;
+    margin-left: 10px;
+    transition: transform 450ms;
+}
+
+.row_posters {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px;
+}
+
+.row_poster:hover {
+    transform: scale(1.05);
+}
+
+.row_posters::-webkit-scrollbar {
+    display: none;
+}
+
+.row_posterLarge {
+    max-height: 250px;
+}
+
+.row_posterLarge:hover {
+    transform: scale(1.09);
+}
+
+.row1 {
+    color: whitesmoke;
+    padding-top: 12px;
+}
+
+.row {
+    color: whitesmoke;
+}
+
+.banner {
+    background-image: url(assets/banner.jpg);
+    background-size: cover;
+    background-position: center center;
+    color: whitesmoke;
+    height: 450px;
+    /* border-bottom: black solid 2px; */
+    box-shadow: 0 4px 16px black;
+}
+
+.banner_content {
+    /* margin-left: -120px; */
+    padding: 140px;
+    height: 200px;
+}
+
+.banner_title {
+    font-size: 3rem;
+    font-weight: 800;
+    padding-bottom: 0.4rem;
+}
+
+.banner_description {
+    width: 45rem;
+    line-height: 1.5;
+    padding-top: 1rem;
+    font-size: 1rem;
+    max-width: 360px;
+    height: 180px;
+}
+
+.banner_button {
+    cursor: pointer;
+    color: whitesmoke;
+    outline: none;
+    border: none;
+    font-weight: 700;
+    border-radius: 0.2pc;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: rgba(50, 50, 50, 0.5);
+
+}
+
+.banner_button:hover {
+    color: #000;
+    background-color: rgb(240, 68, 68);
+    transition: all 0.5s;
+}
+
+/* .banner-bottom{
+    margin-top: 150px;
+    height: 7.5rem;
+    background-image: linear-gradient(360deg, transparent, rgba(38, 38, 38, 38), #0000);
+} */
+
+.logo {
+    width: 80px;
+    object-fit: contain;
+}
+
+.avatar {
+    width: 30px;
+    object-fit: contain;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+@media (max-width:510px){
+    .banner_content{
+        padding: 20px;
+        padding-top: 6rem;
+    }
+
+    .banner{
+        width: 100%;
+    }
+}
+
+@media (max-width:430px){
+    .banner{
+        margin-right: 8%;
+    }
+}
